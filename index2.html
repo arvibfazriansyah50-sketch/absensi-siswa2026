@@ -7,17 +7,14 @@
   <meta name="description" content="Aplikasi absensi peserta didik.">
   <title>Absensi Peserta Didik</title>
   <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/a/AVvXsEiHvgXgNoGTc_c8ZfAeQr2N2QoT4zMIoX3aGn3aeJK-AJC6G_fOl7JUia9w0510lJMhJmDVoPzvBTFqrJMaEPQMiQ1oGEwH0FJ_dOVDHh7AT0zB2lNjPgV7IzGsKZ5Mbn0Y3UmzzGBJWmz-wL5hxiFG99cRZ1c2n5VOHEMiBvc6Atv7DoUNiRmFmG6INbih=s400">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['DM Sans', 'sans-serif'],
-            display: ['Manrope', 'sans-serif']
+            sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            display: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
           },
           colors: {
             ink: '#20312b',
@@ -31,19 +28,21 @@
   </script>
   <style>
     :root { color-scheme: light; }
-    body { background: #f4f7f5; color: #20312b; font-family: 'DM Sans', sans-serif; }
+    body { background: #f7f8f7; color: #26342d; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
     [x-cloak] { display: none !important; }
     .control { min-height: 46px; }
-    .status-select { transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; }
+    .status-select { transition: none; }
     .status-empty { background: #f3f5f4; color: #66756e; }
     .status-hadir { background: #e3f4e9; color: #176b3b; border-color: #b9dfc5; }
     .status-izin { background: #e7f1fb; color: #245e91; border-color: #c8dcef; }
     .status-sakit { background: #fff2d9; color: #8a570a; border-color: #f2dcaa; }
     .status-alpa { background: #fde8e7; color: #a13f3b; border-color: #f1c7c4; }
-    .skeleton { background: linear-gradient(90deg, #e8eeea 25%, #f7f9f8 50%, #e8eeea 75%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease-in-out infinite; }
-    @keyframes skeleton-shimmer { to { background-position: -200% 0; } }
-    .rise-in { animation: rise-in 420ms cubic-bezier(.2,.7,.2,1) both; }
-    @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .skeleton { background: #edf0ee; }
+    .rise-in { animation: none; }
+    main { gap: 1rem !important; }
+    main > section, main article, [role="dialog"] { border-radius: .5rem !important; box-shadow: none !important; }
+    main > section { border-color: #e1e5e2; }
+    main button, main input, main select, [role="dialog"] button { border-radius: .375rem !important; box-shadow: none !important; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
   </style>
   <script>
