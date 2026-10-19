@@ -37,7 +37,7 @@
       min-width: 0;
       max-width: 100%;
       box-sizing: border-box;
-      font-size: 16px;
+      font-size: 14px;
     }
     .status-select { transition: none; }
     .status-empty { background: #f3f5f4; color: #66756e; }
@@ -620,7 +620,7 @@
           </label>
           <label class="block min-w-0 sm:col-span-2 lg:col-span-1">
             <span class="mb-1.5 block text-xs font-semibold text-[#637269]">2. Tanggal</span>
-            <input type="date" x-model="selectedDate" @change="changeAttendanceContext()" class="control block w-full min-w-0 max-w-full box-border rounded-lg border border-[#dce5df] bg-white px-3 text-sm font-semibold text-ink outline-none transition focus:border-forest focus:ring-2 focus:ring-[#176b52]/10">
+            <input type="date" x-model="selectedDate" @change="changeAttendanceContext()" aria-label="Pilih tanggal absensi" class="control block w-full min-w-0 max-w-full box-border rounded-lg border border-[#dce5df] bg-white px-3 text-sm font-semibold text-ink outline-none transition focus:border-forest focus:ring-2 focus:ring-[#176b52]/10">
           </label>
           <label class="block min-w-0">
             <span class="mb-1.5 block text-xs font-semibold text-[#637269]">3. Kelas</span>
